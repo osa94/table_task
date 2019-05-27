@@ -1,0 +1,76 @@
+
+* - dodatkowe informacje na samym dole
+------------------------------------------------------------------------------------------------------
+Tworzenie bazy danych
+
+1. Otworzyć wiersz poleceń
+2. wpisać: cd Ścieżka\do\projektu
+3. wpisać: python create_database.py
+------------------------------------------------------------------------------------------------------
+Wyciąganie informacji
+
+1) obliczenie średniej liczby osób, które przystąpiły do egzaminu dla danego województwa w danym roku
+
+python commands.py -m przystępowalność -t [*Terytorium] -y [*Rok] -s [*Płeć]
+
+np. python commands.py -m przystępowalność -t Łódzkie -y 2015 -s kobiety
+
+######################################################################################################
+
+2) obliczenie procentowej zdawalności dla danego województwa na przestrzeni lat
+
+python commands.py -m zdawalność -t [*Terytorium] -s [*Płeć]
+
+np.python commands.py -m zdawalność -t Łódzkie -s mężczyźni
+
+######################################################################################################
+
+3) podanie województwa o najlepszej zdawalności w konkretnym roku
+
+python commands.py -m najlepsze -y [*Rok] -s [*Płeć]
+
+np.python commands.py -m najlepsze -y 2015 -s mężczyźni
+
+######################################################################################################
+
+4) porównanie dwóch województw - dla podanych dwóch województw wypisanie, które z województw miało lepszą zdawalność w każdym dostępnym roku
+
+python commands.py -m lepsze -t [*Terytorium] -n [*Terytorium] -s [*Płeć]
+
+np.python commands.py -m lepsze -t Łódzkie -n Mazowieckie -s kobiety
+
+######################################################################################################
+
+5) wykrycie województw, które zanotowały regresję (mniejszy współczynnik zdawalności w kolejnym roku), jeżeli takowe znajdują się w zbiorze każdym dostępnym roku
+
+python commands.py -m regres -s [*Płeć]
+
+np.python commands.py -m regres -s kobiety
+
+------------------------------------------------------------------------------------------------------
+
+
+*Terytorium (dostępne możliwości):
+	 Polska 
+	 Dolnośląskie 
+	 Kujawsko-pomorskie 
+	 Lubelskie 
+	 Lubuskie 
+	 Łódzkie 
+	 Małopolskie 
+	 Mazowieckie 
+	 Opolskie 
+	 Podkarpackie 
+	 Podlaskie 
+	 Pomorskie 
+	 Śląskie 
+	 Świętokrzyskie 
+	 Warmińsko-Mazurskie 
+	 Wielkopolskie 
+	 Zachodniopomorskie 		
+
+*Rok:	2010 - 2018
+
+*Płec (parametr opcjonalny):
+	kobiety	
+	mężczyźni
